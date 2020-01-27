@@ -8,7 +8,7 @@ class EmployeeRequest extends FormRequest
 {
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     public function rules()
@@ -18,7 +18,7 @@ class EmployeeRequest extends FormRequest
             'lastname' => 'string|required|max:100',
             'middlename' => 'string|nullable|max:100',
             'gender' => 'string|nullable|max:10',
-            'salary' => 'integer|nullable'
+            'salary' => 'string|nullable'
         ];
     }
 }
